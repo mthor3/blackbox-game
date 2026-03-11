@@ -4,6 +4,7 @@
   font-weight: 400;
   color: #1a1a2e;
   background-color: #f0f0f5;
+  --cell: 48px;
 }
 
 * {
@@ -17,4 +18,13 @@ body {
   justify-content: center;
   min-height: 100vh;
   padding: 1rem;
+}
+
+@media (max-width: 560px) {
+  :root {
+    --cell: calc((100vw - 1rem - 18px) / 10);
+  }
+  body {
+    padding: 0.5rem;
+  }
 }
